@@ -1,0 +1,116 @@
+/* Ressete global  */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+/*Estilos da página */
+body{
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+.container-topo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+img{
+  margin-top: 50px;
+}
+h2{
+  font-size: 32px;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 50px;
+}
+.input-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 20px;
+ 
+}
+.input-container input{
+  display: block;
+  width: 372px;
+  height: 74px;
+  font-size:40px ;
+  color: #fff;
+  background: #343335;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 60px;
+}
+.btn-sortear{
+  display: block;
+  width: 324px;
+  height: 72px;
+  font-size:36px ;
+  font-weight: 700;
+  color: #fff;
+  background: #AEC346;
+  box-shadow: 0 18px 40px rgba(174, 195, 70, 0.35);
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 90px auto;
+}
+.btn-sortear:hover{
+  background: #AEC346;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.result-value{
+    text-align: center;
+   font-size: 3rem;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('https://images.unsplash.com/photo-1732535725600-f805d8b33c9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+    background-size: 200%; /* Enlarged for smooth animation */
+    background-position: 0 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-background 5s infinite alternate linear;
+}
+
+/* Animação de fundo para o texto do resultado, criando um efeito visual interessante. O fundo é uma imagem que se move horizontalmente, dando a impressão de que o texto está "brilhando" ou "pulsando". A animação é contínua e alterna entre os estados inicial e final para criar um efeito suave. */
+@Keyframes animate-background{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+  img{
+    width: 250px;
+    height: auto;
+  }
+  .input-container input{
+    width: 100%;
+    margin-right: 0;
+    font-size: 25px;
+  }
+  .btn-sortear{
+    width: 100%;
+    margin: 40px auto;
+  }
+  .result-value{
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+}
